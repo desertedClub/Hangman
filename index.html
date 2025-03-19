@@ -13,24 +13,63 @@
     <body>
         <nav> 
             <button id="menu-btn" onClick="toggleSidebar()">
-                Button
             </button> 
-                Hangman
+            <h1>Hangman</h1>
         </nav>
-        <aside id="sidebar">Menu</aside>
+<!-- /////////////////////////////////// sidebar ///////////////////////////// -->
+        <aside id="sidebar">
+            <h1>Menu</h1>
+            <div id="options">
+                <h3>Options</h3>
+                <div id="lang">
+                    <input type="radio" name="lang" id="bg">
+                    <label for="bg">BG</label>
+    
+                    <input type="radio" name="lang" id="en">
+                    <label for="en">EN</label>
+                </div>
+            </div>
+
+            <div id="game-dif">
+                <input type="radio" name="level" id="easy">
+                <label for="easy">Easy</label>
+
+                <input type="radio" name="level" id="mid">
+                <label for="mid">Medium</label>
+
+                <input type="radio" name="level" id="hard">
+                <label for="hard">Hard</label>
+            </div>
+        </aside>
 <!-- ///////////////////// main screen /////////////////////////// -->
         <main>
         <div id="main-screen">
-            
 <!-- /////////////////////////// game ///////////////////////////// -->
             <div id="game">
-                <h1>*game*</h1>
-            </div>
-<!-- ///////////////////////// game difficulty //////////////////// -->
-            <div id="game-dif">
-                <h1>*game difficulty*</h1>
+        <!-- /// *change screen when reading rules* /// -->
+                <div id="theme">
+                    <h1>Theme title</h1>
+                    <p>theme description</p>
+                </div>
+
+                <div id="lives">
+                    <p>Lives: 6 (example)</p>
+                </div>
+
+                <div id="hangman-frame">
+                    <!-- //// images //// -->
+                </div>
+
+                <div id="words">
+
+                </div>
+
+                <div id="letters">
+
+                </div>
             </div>
 
+            <!-- <div id="rules">RULES</div> -->
         </div>
         </main>
     </body>
