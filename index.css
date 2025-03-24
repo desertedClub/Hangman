@@ -30,10 +30,41 @@ aside {
     align-self: start;
     grid-area: sidebar;
     background-color: rgb(252, 229, 180);
+
+    align-content: center;
+    justify-items: center;
 }
 main {
     grid-area: main;
     background-color: rgb(255, 243, 224);
+}
+.radio-container {
+    display: inline-flex;
+    gap: 10px;
+}
+.custom-radio-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 25px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #f0f0f0;
+}
+.radio-input {
+    /* hide default radio button */
+    opacity: 0;
+    /* needed for hiding  */
+    position: absolute;
+}
+.radio-input:checked + .custom-radio-container {
+    /* style for checked state */
+    background-color: #d0d0d0;
+}
+#lang {
+    display: flex;
+    gap: 10px;
 }
 #game {
     grid-area: game;
@@ -62,6 +93,7 @@ main {
     height: 200px;
     border: 1px black solid;
 }
+
 
 @media(max-width: 800px) {
     body {

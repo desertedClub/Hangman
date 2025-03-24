@@ -1,5 +1,7 @@
 <!-- два вида речник, бутон за избор на език, 6 речника - 3 бг, 3 англ според нивата на трудност
 макс брой думи 10 -->
+
+<!-- картинки за splash screen също икона за играта -->
 <!DOCTYPE html>
 <html>
     <head>
@@ -18,19 +20,22 @@
         </nav>
 <!-- /////////////////////////////////// sidebar ///////////////////////////// -->
         <aside id="sidebar">
-            <h1>Menu</h1>
             <div id="options">
-                <h3>Options</h3>
-                <div id="lang">
-                    <input type="radio" name="lang" id="bg">
-                    <label for="bg">BG</label>
-    
-                    <input type="radio" name="lang" id="en">
-                    <label for="en">EN</label>
+                <h3>Language:</h3>
+                <div class="radio-container" id="lang">
+                    <label>
+                        <input class="radio-input" type="radio" name="lang" id="bg">
+                        <div class="custom-radio-container">BG</div>
+                    </label>
+                    <label>
+                        <input class="radio-input" type="radio" name="lang" id="en">
+                        <div class="custom-radio-container">EN</div>
+                    </label>
                 </div>
             </div>
 
-            <div id="game-dif">
+            <h4>Difficulty level:</h4>
+            <div class="radio-container" id="game-dif">
                 <input type="radio" name="level" id="easy">
                 <label for="easy">Easy</label>
 
