@@ -31,7 +31,7 @@ aside {
     grid-area: sidebar;
     background-color: rgb(252, 229, 180);
 
-    align-content: center;
+    padding-top: 35px;
     justify-items: center;
 }
 main {
@@ -40,17 +40,21 @@ main {
 }
 .radio-container {
     display: inline-flex;
-    gap: 10px;
+    gap: 3px;
 }
 .custom-radio-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 65px;
+    width: 80px;
     height: 25px;
-    border: 1px solid #ccc;
+    border: 1px solid #fff7e3;
     cursor: pointer;
-    background-color: #f0f0f0;
+    background-color: rgb(255, 196, 0);
+    border-radius: 3px;
+    font-weight: bold;
+
+    margin: 5px;
 }
 .radio-input {
     /* hide default radio button */
@@ -60,7 +64,10 @@ main {
 }
 .radio-input:checked + .custom-radio-container {
     /* style for checked state */
-    background-color: #d0d0d0;
+    background-color: rgb(255, 153, 0);
+}
+.button-input {
+    margin-top: 50px;
 }
 #lang {
     display: flex;
@@ -89,11 +96,42 @@ main {
     align-items: center;
 }
 #hangman-frame {
-    width: 300px;
+    width: 340px;
     height: 200px;
     border: 1px black solid;
 }
-
+#lang-options {
+    justify-content: center;
+    text-align: center;
+    margin: 10px;
+}
+#diff-options {
+    justify-items: center;
+    margin: 10px;
+}
+#game-diff {
+    display: block;
+}
+#keyboard-en {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* Adjust columns as needed */
+    gap: 5px;
+    margin-top: 20px;
+}
+#keyboard-en button {
+    font-size: 16px;
+    width: 35px;
+    height: 35px;
+    font-weight: bold;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#keyboard button.disabled {
+    background-color: #eee;
+    color: #aaa;
+    cursor: not-allowed;
+}
 
 @media(max-width: 800px) {
     body {

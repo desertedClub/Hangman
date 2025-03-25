@@ -20,7 +20,7 @@
         </nav>
 <!-- /////////////////////////////////// sidebar ///////////////////////////// -->
         <aside id="sidebar">
-            <div id="options">
+            <div id="lang-options">
                 <h3>Language:</h3>
                 <div class="radio-container" id="lang">
                     <label>
@@ -34,16 +34,28 @@
                 </div>
             </div>
 
-            <h4>Difficulty level:</h4>
-            <div class="radio-container" id="game-dif">
-                <input type="radio" name="level" id="easy">
-                <label for="easy">Easy</label>
-
-                <input type="radio" name="level" id="mid">
-                <label for="mid">Medium</label>
-
-                <input type="radio" name="level" id="hard">
-                <label for="hard">Hard</label>
+            <div id="diff-options">
+                <h3>Difficulty level:</h4>
+                <div class="radio-container" id="game-diff">
+                    <label>
+                        <input class="radio-input" type="radio" name="diff" id="easy">
+                        <div class="custom-radio-container">EASY</div>
+                    </label>
+                    <label>
+                        <input class="radio-input" type="radio" name="diff" id="mid">
+                        <div class="custom-radio-container">MEDIUM</div>
+                    </label>
+                    <label>
+                        <input class="radio-input" type="radio" name="diff" id="hard">
+                        <div class="custom-radio-container">HARD</div>
+                    </label>
+                </div>
+            </div>
+            <div id="rules">
+                <label>
+                    <!-- onClick function that loads rules page -->
+                    <button class="button-input">RULES</button>
+                </label>
             </div>
         </aside>
 <!-- ///////////////////// main screen /////////////////////////// -->
@@ -65,16 +77,44 @@
                     <!-- //// images //// -->
                 </div>
 
-                <div id="words">
-
+                <div id="word-display">
+                    
                 </div>
 
-                <div id="letters">
-
+                <div id="keyboard-en">
+                    <button data-letter="a">A</button>
+                    <button data-letter="b">B</button>
+                    <button data-letter="c">C</button>
+                    <button data-letter="d">D</button>
+                    <button data-letter="e">E</button>
+                    <button data-letter="f">F</button>
+                    <button data-letter="g">G</button>
+                    <button data-letter="h">H</button>
+                    <button data-letter="i">I</button>
+                    <button data-letter="j">J</button>
+                    <button data-letter="k">K</button>
+                    <button data-letter="l">L</button>
+                    <button data-letter="m">M</button>
+                    <button data-letter="n">N</button>
+                    <button data-letter="o">O</button>
+                    <button data-letter="p">P</button>
+                    <button data-letter="q">Q</button>
+                    <button data-letter="r">R</button>
+                    <button data-letter="s">S</button>
+                    <button data-letter="t">T</button>
+                    <button data-letter="u">U</button>
+                    <button data-letter="v">V</button>
+                    <button data-letter="w">W</button>
+                    <button data-letter="x">X</button>
+                    <button data-letter="y">Y</button>
+                    <button data-letter="z">Z</button>
                 </div>
             </div>
 
             <!-- <div id="rules">RULES</div> -->
+             <div id="gamerule">
+
+             </div>
         </div>
         </main>
     </body>
