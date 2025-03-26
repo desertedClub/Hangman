@@ -3,13 +3,13 @@
     padding: 0;
 }
 body {
-    height: 100vh;
     display: grid;
     grid-template-columns: 250px 1fr;
     grid-template-rows: auto 1fr;
     grid-template-areas: 
         "navbar navbar"
         "sidebar main";
+    background-color: rgb(255, 243, 224);;
 }
 nav {
     top: 0;
@@ -24,7 +24,7 @@ nav {
     justify-items: center;
 }
 aside {
-    height: calc(100vh - 59.2px);
+    height: calc(95.8vh - 59.2px);
     top: 59.2px;
     position: sticky;
     align-self: start;
@@ -37,6 +37,8 @@ aside {
 main {
     grid-area: main;
     background-color: rgb(255, 243, 224);
+    width: 100%;
+    height: 100%;
 }
 .radio-container {
     display: inline-flex;
@@ -46,8 +48,8 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80px;
-    height: 25px;
+    width: 100px;
+    height: 40px;
     border: 1px solid #fff7e3;
     cursor: pointer;
     background-color: rgb(255, 196, 0);
@@ -63,7 +65,6 @@ main {
     position: absolute;
 }
 .radio-input:checked + .custom-radio-container {
-    /* style for checked state */
     background-color: rgb(255, 153, 0);
 }
 .button-input {
@@ -78,9 +79,6 @@ main {
 
     display: grid;
     justify-content: center;
-}
-#game-dif {
-    grid-area: dif;
 }
 #menu-btn {
     background: url('media/images/burger.png');
@@ -104,33 +102,71 @@ main {
     justify-content: center;
     text-align: center;
     margin: 10px;
+    font-size: 25px;
 }
 #diff-options {
     justify-items: center;
     margin: 10px;
+    font-size: 25px;
 }
 #game-diff {
     display: block;
+    width: fit-content;
 }
 #keyboard-en {
     display: grid;
     grid-template-columns: repeat(7, 1fr); /* Adjust columns as needed */
     gap: 5px;
     margin-top: 20px;
+    justify-items: center;
 }
 #keyboard-en button {
-    font-size: 16px;
-    width: 35px;
-    height: 35px;
+    font-size: 30px;
+    width: 45px;
+    height: 45px;
     font-weight: bold;
     border: 1px solid black;
     border-radius: 5px;
     cursor: pointer;
+    background-color: white;
 }
 #keyboard button.disabled {
-    background-color: #eee;
+    background-color: #ffffff;
     color: #aaa;
     cursor: not-allowed;
+}
+#word-display {
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+    letter-spacing: 5px;
+}
+#theme {
+    margin-bottom: 35px;
+}
+#theme h1 {
+    font-size: 40px;
+    text-align: center;
+}
+#theme p {
+    font-size: 25px;
+    text-align: center;
+}
+#lives {
+    font-size: 25px;
+    margin: 5px 0;
+}
+#result {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 15px;
+}
+#new-game {
+    width: fit-content;
+    font-size: 30px;
+    background-color: rgb(255, 196, 0);
+    border: none;
+    text-align: center;
 }
 
 @media(max-width: 800px) {
@@ -144,5 +180,12 @@ main {
     }
     .show {
         display: block;
+    }
+    #diff-options, #lang-options {
+        font-size: 30px;
+    }
+    .custom-radio-container {
+        width: 140px;
+        height: 45px;
     }
 }
